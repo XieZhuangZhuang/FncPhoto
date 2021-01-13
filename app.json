@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "魅丽影像",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#888",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 60
+  },
+  "entryPagePath": "pages/index/index",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
