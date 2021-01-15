@@ -1,0 +1,3 @@
+<view class="container">
+  <SearchInput></SearchInput>
+</view>

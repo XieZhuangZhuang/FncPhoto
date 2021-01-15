@@ -1,15 +1,38 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgroundColor": "#fb7299",
     "navigationBarTitleText": "魅丽影像",
     "navigationBarTextStyle":"white",
     "backgroundColor": "#888",
     "enablePullDownRefresh": true,
     "onReachBottomDistance": 60
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#fb7299",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "/images/home-checked.png"
+    },{
+      "pagePath": "pages/order/order",
+      "text": "预约",
+      "iconPath": "/images/appointment.png",
+      "selectedIconPath": "/images/appointment-checked.png"
+    },{
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "/images/me.png",
+      "selectedIconPath": "/images/me-checked.png"
+    }]
   },
   "entryPagePath": "pages/index/index",
   "style": "v2",
