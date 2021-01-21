@@ -4,7 +4,78 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    "swiperList":[
+      {
+        "src":"../../images/1.webp"
+      },{
+        "src":"../../images/2.webp"
+      },{
+        "src":"../../images/1.webp"
+      }
+    ],
+    "swiperList1":[
+      {
+        "src":"../../images/11.png"
+      },{
+        "src":"../../images/11.png"
+      },{
+        "src":"../../images/11.png"
+      },{
+        "src":"../../images/11.png"
+      },{
+        "src":"../../images/11.png"
+      },{
+        "src":"../../images/11.png"
+      }
+    ],
+    navbar: ['精美作品', '摄影大师'],
+    currentTab: 0
+  },
+  navbarTap: function(e){
+    if(e.currentTarget.dataset.idx == 0){
+      this.setData({
+        swiperList1: [
+          {
+            "src":"../../images/11.png"
+          },{
+            "src":"../../images/11.png"
+          },{
+            "src":"../../images/11.png"
+          },{
+            "src":"../../images/11.png"
+          },{
+            "src":"../../images/11.png"
+          },{
+            "src":"../../images/11.png"
+          },{
+            "src":"../../images/11.png"
+          }
+        ]
+      })
+    }else{
+      this.setData({
+        swiperList1: [
+          {
+            "src":"../../images/3.png"
+          },{
+            "src":"../../images/3.png"
+          },{
+            "src":"../../images/3.png"
+          },{
+            "src":"../../images/3.png"
+          },{
+            "src":"../../images/3.png"
+          },{
+            "src":"../../images/3.png"
+          },{
+            "src":"../../images/3.png"
+          }
+        ]
+      })
+    }
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
   },
 
   /**
@@ -53,7 +124,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    console.log("触底了。。。");
   },
 
   /**

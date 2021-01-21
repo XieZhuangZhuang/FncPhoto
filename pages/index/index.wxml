@@ -1,3 +1,31 @@
+<SearchInput style="position: fixed; top:0;width:100%; height:50px; z-index:1;"></SearchInput>
 <view class="container">
-  <SearchInput></SearchInput>
+  <view> 
+      <!-- 
+          swiper 存在默认宽度和高度 100% * 150px 
+          image 存在默认宽高 320px * 240px
+      -->
+    <swiper indicator-dots="true" circular="true" style="margin-top:49px;">
+      <swiper-item wx:for="{{swiperList}}">
+        <navigator>
+          <image mode="widthFix" src="{{item.src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+    <!--导航条-->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="index" bindtap="navbarTap">{{item}}</text>
+  </view>
+  
+  <!--列表-->
+  <view style="display:flex; flex-wrap:wrap;">
+    <view wx:for="{{swiperList1}}" >
+      <view>
+        <navigator style="margin-left:35rpx; margin-top:25rpx;">
+            <image style="width:320rpx;" mode="widthFix" src="{{item.src}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
 </view>
